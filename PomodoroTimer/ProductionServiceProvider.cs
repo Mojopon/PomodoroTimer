@@ -8,16 +8,20 @@ namespace PomodoroTimer
 {
     public class ProductionServiceProvider : ServiceProvider
     {
-        protected override void PrepareConfigPresenter(IApplicationController applicationController)
-        {
-            var configForm = new ConfigForm();
-            configPresenter = new ConfigPresenter(applicationController, configForm);
-        }
+        public ProductionServiceProvider(IApplicationController applicationController) : base(applicationController) { }
 
-        protected override void PrepareMainPresenter(IApplicationController applicationController)
+        public override IMainPresenter GetMainPresenter()
         {
             var mainForm = new MainForm();
-            mainPresenter = new MainPresenter(applicationController, mainForm);
+            var mainPresenter = new MainPresenter(applicationController, mainForm);
+            return mainPresenter;
+        }
+
+        public override IConfigPresenter GetConfigPresenter()
+        {
+            var configForm = new ConfigForm();
+            var configPresenter = new ConfigPresenter(applicationController, configForm);
+            return configPresenter;
         }
     }
 }

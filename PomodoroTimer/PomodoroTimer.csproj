@@ -91,7 +91,7 @@
     <Compile Include="IPomodoroConfig.cs" />
     <Compile Include="IPresenter.cs" />
     <Compile Include="IRunnableForm.cs" />
-    <Compile Include="IServiceProvider.cs" />
+    <Compile Include="IPomodoroTimerServiceProvider.cs" />
     <Compile Include="ITimerForm.cs" />
     <Compile Include="MainForm\IMainForm.cs" />
     <Compile Include="MainForm\MainForm.cs">
@@ -107,6 +107,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainForm\MainPresenter.cs" />
     <Compile Include="ServiceProvider.cs" />
+    <Compile Include="TestServiceProvider.cs" />
     <EmbeddedResource Include="ConfigForm.resx">
       <DependentUpon>ConfigForm.cs</DependentUpon>
     </EmbeddedResource>

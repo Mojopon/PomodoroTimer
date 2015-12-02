@@ -41,7 +41,7 @@ namespace PomodoroTimer
 
         public void ProcessCommand(ICommand command)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

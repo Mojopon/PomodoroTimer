@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationControllerTest.cs" />
     <Compile Include="CommandTest.cs" />
     <Compile Include="ConfigTest.cs" />
     <Compile Include="CountdownTest.cs" />

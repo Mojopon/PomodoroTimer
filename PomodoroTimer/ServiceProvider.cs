@@ -6,32 +6,15 @@ using System.Threading.Tasks;
 
 namespace PomodoroTimer
 {
-    public abstract class ServiceProvider : IServiceProvider
+    public abstract class ServiceProvider : IPomodoroTimerServiceProvider
     {
-        protected IMainPresenter mainPresenter;
-        protected IConfigPresenter configPresenter;
-
-        public ServiceProvider() { }
-
-        protected abstract void PrepareConfigPresenter(IApplicationController applicationController);
-        protected abstract void PrepareMainPresenter(IApplicationController applicationController);
-
-        public IMainPresenter GetMainPresenter(IApplicationController applicationController)
+        protected IApplicationController applicationController;
+        public ServiceProvider(IApplicationController target)
         {
-            if (mainPresenter == null)
-            {
-                PrepareMainPresenter(applicationController);
-            }
-            return mainPresenter;
+            applicationController = target;
         }
 
-        public IConfigPresenter GetConfigPresenter(IApplicationController applicationController)
-        {
-            if (configPresenter == null)
-            {
-                PrepareConfigPresenter(applicationController);
-            }
-            return configPresenter;
-        }
+        public abstract IMainPresenter GetMainPresenter();
+        public abstract IConfigPresenter GetConfigPresenter();
     }
 }
