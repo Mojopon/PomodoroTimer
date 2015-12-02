@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PomodoroTimer
 {
-    public interface IConfigPresenter
+    public interface IConfigPresenter : IPresenter
     {
         void ExecuteConfiguring();
     }

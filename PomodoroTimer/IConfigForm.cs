@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PomodoroTimer
 {
-    public interface IConfigForm : IRunnableForm
+    public interface IConfigForm : IFormDisplayable
     {
         int GetTaskTime();
         int GetBreakTime();

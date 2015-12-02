@@ -37,7 +37,7 @@ namespace PomodoroTimer
             return int.Parse(textBoxRepeatTime.Text);
         }
 
-        public void Run()
+        public void DisplayForm()
         {
             Show();
         }

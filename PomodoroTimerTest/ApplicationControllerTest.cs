@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 
-namespace PomodoroTimer
+namespace PomodoroTimerTest
 {
-    public interface IFormDisplayable
+    class ApplicationControllerTest
     {
-        void DisplayForm();
     }
 }

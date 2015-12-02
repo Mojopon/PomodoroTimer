@@ -8,7 +8,7 @@ namespace PomodoroTimer
 {
     public interface IServiceProvider
     {
-        IMainPresenter GetMainPresenter();
-        IConfigPresenter GetConfigPresenter();
+        IMainPresenter GetMainPresenter(IApplicationController applicationController);
+        IConfigPresenter GetConfigPresenter(IApplicationController applicationController);
     }
 }

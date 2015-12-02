@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace PomodoroTimer
 {
-    public interface IFormDisplayable
+    public interface IPresenter : IFormDisplayable, ICommandable
     {
-        void DisplayForm();
     }
 }

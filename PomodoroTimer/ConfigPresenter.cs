@@ -20,10 +20,10 @@ namespace PomodoroTimer
             manager = new ConfigManager();
         }
 
-        public void Run()
+        public void DisplayForm()
         {
             ExecuteConfiguring();
-            form.Run();
+            form.DisplayForm();
         }
 
         public void ExecuteConfiguring()
@@ -37,6 +37,11 @@ namespace PomodoroTimer
             var config = manager.GetConfig();
             var command = new ChangeConfigCommand(config);
             applicationController.Execute(command);
+        }
+
+        public void ProcessCommand(ICommand command)
+        {
+            throw new NotImplementedException();
         }
     }
 }

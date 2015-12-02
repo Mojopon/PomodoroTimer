@@ -23,9 +23,9 @@ namespace PomodoroTimer
             mainform.OnConfigOpen += OnConfigOpenEvent;
         }
 
-        public void Run()
+        public void DisplayForm()
         {
-            mainform.Run();
+            mainform.DisplayForm();
         }
 
         private void DrawTime()

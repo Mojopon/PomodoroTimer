@@ -89,6 +89,7 @@
     <Compile Include="IMainPresenter.cs" />
     <Compile Include="IPomodoro.cs" />
     <Compile Include="IPomodoroConfig.cs" />
+    <Compile Include="IPresenter.cs" />
     <Compile Include="IRunnableForm.cs" />
     <Compile Include="IServiceProvider.cs" />
     <Compile Include="ITimerForm.cs" />
@@ -101,9 +102,11 @@
     </Compile>
     <Compile Include="Pomodoro.cs" />
     <Compile Include="PomodoroConfig.cs" />
+    <Compile Include="ProductionServiceProvider.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainForm\MainPresenter.cs" />
+    <Compile Include="ServiceProvider.cs" />
     <EmbeddedResource Include="ConfigForm.resx">
       <DependentUpon>ConfigForm.cs</DependentUpon>
     </EmbeddedResource>

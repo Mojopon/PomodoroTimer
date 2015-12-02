@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PomodoroTimer
 {
-    public interface IMainForm : IRunnableForm, ITimerForm
+    public interface IMainForm : IFormDisplayable, ITimerForm
     {
         event Action OnConfigOpen;
         void DrawTime(int minute, int second);

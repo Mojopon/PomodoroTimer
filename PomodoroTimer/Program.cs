@@ -18,7 +18,8 @@ namespace PomodoroTimer
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var applicationController = new ApplicationController();
+            var serviceProvider = new ProductionServiceProvider();
+            var applicationController = new ApplicationController(serviceProvider);
             applicationController.Run(App.MainForm);
         }
     }

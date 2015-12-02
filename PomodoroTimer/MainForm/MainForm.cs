@@ -23,7 +23,7 @@ namespace PomodoroTimer
 
         public event Action OnConfigOpen;
 
-        public void Run()
+        public void DisplayForm()
         {
             Application.Run(this);
         }

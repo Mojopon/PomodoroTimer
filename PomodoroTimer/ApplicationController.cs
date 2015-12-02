@@ -8,19 +8,17 @@ namespace PomodoroTimer
 {
     public class ApplicationController : IApplicationController
     {
-        private MainPresenter mainPresenter;
-        private ConfigPresenter configPresenter;
+        private IMainPresenter mainPresenter;
+        private IConfigPresenter configPresenter;
 
         private List<ICommandable> commandables = new List<ICommandable>();
 
-        public ApplicationController()
+        public ApplicationController(IServiceProvider serviceProvider)
         {
-            var mainForm = new MainForm();
-            mainPresenter = new MainPresenter(this, mainForm);
+            mainPresenter = serviceProvider.GetMainPresenter(this);
             commandables.Add(mainPresenter);
 
-            var configForm = new ConfigForm();
-            configPresenter = new ConfigPresenter(this, configForm);
+            configPresenter = serviceProvider.GetConfigPresenter(this);
             configPresenter.ExecuteConfiguring();
         }
 
@@ -37,22 +35,22 @@ namespace PomodoroTimer
             switch(application)
             {
                 case App.MainForm:
-                    RunMainForm();
+                    DisplayMainForm();
                     break;
                 case App.Config:
-                    RunConfigForm();
+                    DisplayConfigForm();
                     break;
             }
         }
 
-        void RunMainForm()
+        void DisplayMainForm()
         {
-            mainPresenter.Run();
+            mainPresenter.DisplayForm();
         }
 
-        void RunConfigForm()
+        void DisplayConfigForm()
         {
-            configPresenter.Run();
+            configPresenter.DisplayForm();
         }
     }
 }
